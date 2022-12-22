@@ -20,7 +20,6 @@ function CustomTimer2({ id }) {
     setStorageKey();
   }
 
-  console.log("rerender ", keyFromLocalStorage);
   return (
     <Chip
       label={

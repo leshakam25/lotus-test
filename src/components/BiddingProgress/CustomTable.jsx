@@ -90,7 +90,6 @@ export default function CustomTable(props) {
     localStorage.setItem("key", 0);
   }, []);
 
-  console.log();
   return (
     <>
       <TableContainer component={Paper}>
@@ -109,12 +108,6 @@ export default function CustomTable(props) {
               </TableCell>{" "}
               {tableData &&
                 tableData.map((el, i) => {
-                  console.log(
-                    "$$$$",
-                    el,
-                    i,
-                    storageKey == i ? "table-cell" : "none"
-                  );
                   return (
                     <TableCell key={i + Date()} align="right" width="200px">
                       <CustomTimer id={i} />
@@ -169,7 +162,6 @@ export default function CustomTable(props) {
                           flexDirection={"column"}
                         >
                           <Typography fontFamily={font}>
-                            {" "}
                             {Object.keys(teammate[row]).map(
                               (price, prIndex) => {
                                 return <p>{teammate[row][price]}</p>;
