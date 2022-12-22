@@ -5,7 +5,7 @@ import Countdown from "react-countdown";
 
 const font = "Unbounded";
 
-function CustomTimer2({ id }) {
+function CustomTimer({ id }) {
   const [date, setDate] = useState(Date.now() + 120000);
   const keyFromLocalStorage = localStorage.getItem("key");
 
@@ -40,37 +40,4 @@ function CustomTimer2({ id }) {
   );
 }
 
-export default CustomTimer2;
-
-// export default class CustomTimer extends Component {
-//   state = { date: Date.now() + 5000 };
-
-//   autostart = () => {
-//     this.setState({ date: Date.now() + 5000 });
-//     setStorageKey();
-//   };
-
-//   render() {
-//     return (
-//       <Chip
-//         label={
-//           <Typography fontSize="20px" fontFamily={font}>
-//             <Countdown
-//               key={this.state.date}
-//               date={this.state.date}
-//               onComplete={this.autostart}
-//             />
-//           </Typography>
-//         }
-//         color="error"
-//         icon={<AvTimerIcon />}
-//         sx={{
-//           py: 3,
-//           fontSize: 24,
-//           opacity: "0.7",
-//           width: 200,
-//         }}
-//       />
-//     );
-//   }
-// }
+export default CustomTimer;

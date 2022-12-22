@@ -82,10 +82,6 @@ const rowLabelList = {
 };
 
 export default function CustomTable(props) {
-  const [storageKey, setStorageKey] = React.useState(
-    localStorage.getItem("key")
-  );
-
   React.useEffect(() => {
     localStorage.setItem("key", 0);
   }, []);
