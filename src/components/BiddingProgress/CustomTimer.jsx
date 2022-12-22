@@ -6,7 +6,7 @@ import Countdown from "react-countdown";
 const font = "Unbounded";
 
 function CustomTimer2({ id }) {
-  const [date, setDate] = useState(Date.now() + 5000);
+  const [date, setDate] = useState(Date.now() + 120000);
   const keyFromLocalStorage = localStorage.getItem("key");
 
   const setStorageKey = () => {
@@ -16,7 +16,7 @@ function CustomTimer2({ id }) {
     );
   };
   function autostart(params) {
-    setDate(Date.now() + 5000);
+    setDate(Date.now() + 120000);
     setStorageKey();
   }
 
