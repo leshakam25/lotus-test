@@ -15,6 +15,7 @@ function CustomTimer({ id }) {
       keyFromLocalStorage < 3 ? +keyFromLocalStorage + 1 : 0
     );
   };
+
   function autostart(params) {
     setDate(Date.now() + 120000);
     setStorageKey();
